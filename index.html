@@ -5,23 +5,157 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    .poster img {
+      width: 300px; /* Set a rectangular width */
+      height: 200px; /* Set a rectangular height */
+      object-fit: cover;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <h1 style="text-align: center;">My Project Portfolio</h1>
-  <div class="container">
-    <div class="poster">
-      <a href="projects/p1_the-christmas-card-conundrum-2022.html">
-        <img src="posters/poster1.jpg" alt="Project 1 Poster">
-        <h2>Project 1</h2>
-      </a>
+  <h1 style="text-align: center;">Daniel Darquea's Project Portfolio</h1>
+
+  <!-- Machine Learning Section -->
+  <section>
+    <h2>Machine Learning</h2>
+    <div class="container">
+      <div class="poster">
+        <a href="projects/ml1_tps-sep-2022.html">
+          <img src="posters/ml1_poster.png" alt="ML Project 1 Poster">
+          
+          <div class="overlay" style="background-color: #03071e; color:aliceblue">
+            <div class="overlay-section">
+              <h4>Predict future sales using time series forecasting</h4>
+              <h4>Actions</h4>
+              <ul class="overlay-list">
+                <li>Developed a composed forecasting model using store, product rates, and seasonality data models.</li>
+              </ul>
+              <h4>Techniques</h4>
+              <ul class="overlay-list">
+                <li>Implemented Ridge Regression, ARIMA and other data models performed by Exploratory Data Analysis (EDA) to
+                  identify weekend, holiday, and seasonal effects.</li>
+              </ul>
+            </div>
+          </div>
+        </a>
+        <h3>Sales Forecast for Large Scale Bookstore</h3>
+      </div>
+      <div class="poster">
+        <a href="projects/ml2_tps3-episode-1-california-housing.html">
+          <img src="posters/ml2_poster.png" alt="ML Project 2 Poster">
+          <div class="overlay" style="background-color: #03071e; color:aliceblue">
+            <div class="overlay-section">
+              <h4>Predict median house prices based on property features</h4>
+              <h4>Actions</h4>
+              <ul class="overlay-list">
+                <li>Engineered features and created a regression model for house price prediction.</li>
+              </ul>
+              <h4>Techniques</h4>
+              <ul class="overlay-list">
+                <li>Applied a combination of Regression Models (XGBoost, LGBM and CatBoost) with cross-validation to improve
+                  model accuracy.</li>
+              </ul>
+            </div>
+          </div>
+        </a>
+        <h3>California Housing Price Prediction</h3>
+      </div>
+
     </div>
-    <div class="poster">
-      <a href="projects/p2_bancolombia-bank-linear-optimization.html">
-        <img src="posters/poster2.png" alt="Project 2 Poster">
-        <h2>Project 2</h2>
-      </a>
+  </section>
+
+  <!-- Deep Learning Section -->
+  <section>
+    <h2>Deep Learning</h2>
+    <div class="container">
+      <div class="poster">
+        <a href="projects/dp1-tabular-playground-series-oct-2022.html">
+          <img src="posters/dp1_poster.jpg" alt="DP Project 1 Poster">
+          
+          <div class="overlay" style="background-color: #970000; color:rgb(236, 236, 236)">
+            <div class="overlay-section">
+              <h4>Predict team scores in Rocket League within 10 seconds</h4>
+              <h4>Actions</h4>
+              <ul class="overlay-list">
+                <li>Built a deep learning model for score prediction.</li>
+              </ul>
+              <h4>Techniques</h4>
+              <ul class="overlay-list">
+                <li>Used the adequate model architecture and applied cross-validation techniques to optimize predictive accuracy
+                  of the Deep Neural Network proposed. Engineered features impact the most over final estimations.</li>
+              </ul>
+            </div>
+          </div>
+          
+        </a>
+        <h3>Rocket League Game Score Prediction</h3>
+      </div>
+
     </div>
-    <!-- Add more posters as needed -->
-  </div>
+  </section>
+
+  <!-- Optimization Problems Section -->
+  <section>
+    <h2>Optimization Problems</h2>
+    <div class="container">
+        <div class="poster">
+            <a href="projects/p1_bancolombia-bank-linear-optimization.html">
+              <img src="posters/poster1.png" alt="ML Project 1 Poster">
+              
+              <div class="overlay" style="background-color: #faa307; color:rgb(20, 20, 20)">
+                <div class="overlay-section">
+                  <h4>Schedule Workers Optimization Problem</h4>
+                  <h4>Actions</h4>
+                  <ul class="overlay-list">
+                    <li>Set equations describing the problem to optimize.</li>
+                  </ul>
+                  <h4>Techniques</h4>
+                  <ul class="overlay-list">
+                    <li>Applied Linear Optimization methods to find the most efficient worker schedule.</li>
+                    <li>Developed scenario-based decision-making methodologies.</li>
+                  </ul>
+                </div>
+              </div>
+              
+            </a>
+            <h3>DATATON 2023 BANCOLOMBIA: Linear Optimization Problem</h3>
+        </div>
+        <div class="poster">
+            <a href="projects/p2_the-christmas-card-conundrum-2022.html">
+              <img src="posters/poster2.jpg" alt="ML Project 1 Poster">
+              
+              <div class="overlay" style="background-color: #faa307; color:rgb(20, 20, 20)">
+                <div class="overlay-section">
+                  <h4>Optimize a traveling salesman problem for image printing.</h4>
+                  <h4>Actions</h4>
+                  <ul class="overlay-list">
+                    <li>Solved a complex optimization problem to find the best route for printing an image pixel by pixel.</li>
+                  </ul>
+                  <h4>Techniques</h4>
+                  <ul class="overlay-list">
+                    <li>Set configuration constraint to simplify optimization.</li>
+                    <li>Used Traveling Salesman algorithms (LKH).</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <h3>Santa 2022 : The Christmas Card Conundrum Challenge</h3>
+        </div>
+    </div>
+  </section>
+
 </body>
 </html>
