@@ -57,6 +57,39 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .s1 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Single */
 .highlight .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
+
+    /* CSS to style the button and the hidden content */
+    .toggle-content {
+      display: none; /* Initially hidden */
+      margin-top: 10px;
+    }
+    .toggle-btn {
+      background-color: #709cdd;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+    .toggle-btn:hover {
+      background-color: #0056b3;
+    }
+    /* New button style */
+  .toggle-btn1 {
+    background-color: #912fbe; /* Different color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+
+  .toggle-btn1:hover {
+    background-color: #57077c; /* Different hover effect */
+  }
+
   </style>
 
 
@@ -14589,7 +14622,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         <h1 style="width: 100%; padding: 50px;"> <span style="color:white">DATATON 2023 BANCOLOMBIA: 
             Linear Optimization Problem</span> </h1>
     </div>
-</div><p>During this Dataton, there is a set of data that allow us to achieve the optimization of the Working Days of the employees of various branches of Bancolombia Bank.</p>
+</div>
+
+<p>During this Dataton, there is a set of data that allow us to achieve the optimization of the Working Days of the employees of various branches of Bancolombia Bank.</p>
 <p><strong><span style="font-size: 20px;color:rgb(51,51,255)">Objective:</span></strong></p>
 <ul>
 <li>Create a model that allows planning the number of advisors in a branch and at the same time improve the scheduling of their workdays.</li>
@@ -14663,7 +14698,11 @@ Specific constraints are divided into:</p>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
+
+<!--Button toggle-->
+<button class="toggle-btn1" style="position: relative; left: 75px;" onclick="toggleContent1('code1')">Show Code</button>
+
+<div class="jp-Cell-inputWrapper" id="code1"  style="display: None;">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -14692,7 +14731,11 @@ Specific constraints are divided into:</p>
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
+
+<!--Button toggle-->
+<button class="toggle-btn1" style="position: relative; left: 75px;" onclick="toggleContent1('code2')">Show Code</button>
+
+<div class="jp-Cell-inputWrapper" id="code2"  style="display: None;">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -14844,7 +14887,10 @@ Specific constraints are divided into:</p>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
+<!--Button toggle-->
+<button class="toggle-btn1" style="position: relative; left: 75px;" onclick="toggleContent1('code4')">Show Code</button>
+
+<div class="jp-Cell-inputWrapper" id="code4"  style="display: None;">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -14933,7 +14979,11 @@ class="
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
+
+<!--Button toggle-->
+<button class="toggle-btn1" style="position: relative; left: 75px;" onclick="toggleContent1('code5')">Show Code</button>
+
+<div class="jp-Cell-inputWrapper" id="code5"  style="display: None;">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -18070,7 +18120,7 @@ Branch | original_config[TC,MT]  Un_Dem/Ov_cap    |  optimized_config[TC,MT]  Un
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Final-Consideratinos-of-the-Linear-Optimization-Model"><p style="font-family:Helvetica; font-weight:bold; letter-spacing: 0px; color:rgb(45, 64, 178); font-size:100%; text-align:left;padding: 5px; border-bottom: 5px solid rgb(45, 64, 178)">Final Consideratinos of the Linear Optimization Model</p><a class="anchor-link" href="#Final-Consideratinos-of-the-Linear-Optimization-Model">&#182;</a></h1><p>As was explore in this notebook:</p>
+<h1 id="Final-Consideratinos-of-the-Linear-Optimization-Model"><p style="font-family:Helvetica; font-weight:bold; letter-spacing: 0px; color:rgb(45, 64, 178); font-size:100%; text-align:left;padding: 5px; border-bottom: 5px solid rgb(45, 64, 178)">Final Considerations of the Linear Optimization Model</p><a class="anchor-link" href="#Final-Consideratinos-of-the-Linear-Optimization-Model">&#182;</a></h1><p>As was explore in this notebook:</p>
 <ul>
 <li>Generator of work shifts allows to <span style='color:orange'>easily prototype new shifts</span> considering new Branch workday needs, this is effective to define special cases such us holidays / special workers schedules. </li>
 <li>The <span style='color:orange'>model can be used to optimized both</span>: Branch workers configuration as well as theirs schedules.</li>
@@ -18083,7 +18133,35 @@ Branch | original_config[TC,MT]  Un_Dem/Ov_cap    |  optimized_config[TC,MT]  Un
 </div>
 </body>
 
+<script>
+  function toggleContent(contentId) {
+    var content = document.getElementById(contentId);
+    var button = document.querySelector(`button[onclick="toggleContent('${contentId}')"]`);
+    
+    // Toggle display
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      button.textContent = "Hide Output "; //+ contentId.slice(-1);
+    } else {
+      content.style.display = "none";
+      button.textContent = "Show Output "; //+ contentId.slice(-1);
+    }
+  }
 
+  function toggleContent1(contentId) {
+    var content = document.getElementById(contentId);
+    var button = document.querySelector(`button[onclick="toggleContent1('${contentId}')"]`);
+    
+    // Toggle display
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      button.textContent = "Hide Code"; //+ contentId.slice(-1);
+    } else {
+      content.style.display = "none";
+      button.textContent = "Show Code"; //+ contentId.slice(-1);
+    }
+  }
+</script>
 
 
 

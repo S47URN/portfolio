@@ -14580,13 +14580,29 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div style="display: flex; background-color: #e36b6b; color:white;">
-<h1 style="margin: auto; padding: 30px;"> Tabular Playground Series Oct 2022 </h1>
-</div><p>The Tabular Playground Series of this month integrates an interesting dataset, a dataset of Rocket League gameplay. This month's challenge is to, given a snapshot from a Rocket League match, predict the probability of each team scoring within the next 10 seconds of the game.</p>
-<p><img src="https://gonintendo.com/system/file_uploads/uploads/000/048/997/original/sBkzo0HxS5orP8XBdI_gjiqVOUm-JqgF.jpg"
-     alt="Markdown Monster icon"
-     style="float: center; margin: auto; padding: 30px;" /></p>
-<h1 id="Dataset-Description">Dataset Description<a class="anchor-link" href="#Dataset-Description">&#182;</a></h1><p>The dataset consists of sequences of snapshots of the state of a Rocket League match, including position and velocity of all players and the ball, as well as extra information. The data was taken from professional Rocket League matches. Each event consists of a chronological series of frames recorded at 10 frames per second. All events begin with a kickoff, and most end in one team scoring a goal, but some are truncated and end with no goal scored due to circumstances which can cause gameplay strategies to shift.</p>
+
+<div style="display: flex; 
+            background-image: url('https://gonintendo.com/system/file_uploads/uploads/000/048/997/original/sBkzo0HxS5orP8XBdI_gjiqVOUm-JqgF.jpg');
+            background-position: center 50%; /* Move the background image to the top center, 10% from the top */
+            background-size: cover; /* Ensure the background image covers the entire container */
+">
+    <div style="display: flex; width: 100%; color:white; background-color:rgba(45, 64, 95, 0.6); text-align: center">
+        <h1 style="width: 100%; padding: 50px;"> <span style="color:white">Rocket League Match Score Prediction</span> </h1>
+    </div>
+</div>
+<p>The Tabular Playground Series of this month integrates an interesting dataset, a dataset of Rocket League gameplay. This month's challenge is to, given a snapshot from a Rocket League match, predict the probability of each team scoring within the next 10 seconds of the game.</p>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Import-Libraries">
+  <p style="font-family:Helvetica; font-weight:bold; letter-spacing: 0px; color:rgb(45, 64, 178); font-size:100%; text-align:left;padding: 5px; border-bottom: 5px solid rgb(45, 64, 178)">
+    Dataset Description</p><a class="anchor-link" href="#Dataset-Description">&#182;</a>
+  </h2>
+</div>
+
+
+<p>The dataset consists of sequences of snapshots of the state of a Rocket League match, including position and velocity of all players and the ball, as well as extra information. The data was taken from professional Rocket League matches. Each event consists of a chronological series of frames recorded at 10 frames per second. All events begin with a kickoff, and most end in one team scoring a goal, but some are truncated and end with no goal scored due to circumstances which can cause gameplay strategies to shift.</p>
 <p><strong>Files:</strong></p>
 <ul>
 <li><strong>train_[0-9].csv</strong>: Train set split into 10 files. Rows are sorted by game_num, event_id, and event_time, and each event is entirely contained in one file.</li>
@@ -14642,7 +14658,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Data-Precision">Data Precision<a class="anchor-link" href="#Data-Precision">&#182;</a></h1><p>The memory usage of complete dataset is <strong>~10 Gb</strong>. It is proposed to <strong>sacrify precision</strong> from certain data in order to reduce this usage. Specifically using the method proposed <a href="https://www.kaggle.com/competitions/tabular-playground-series-oct-2022/discussion/356540">here</a>, the change per column will be the following, using <code>pandas</code> library:</p>
+<h2 id="Data-Precision">Data Precision<a class="anchor-link" href="#Data-Precision">&#182;</a></h2>
+<p>The memory usage of complete dataset is <strong>~10 Gb</strong>. It is proposed to <strong>sacrify precision</strong> from certain data in order to reduce this usage. Specifically using the method proposed <a href="https://www.kaggle.com/competitions/tabular-playground-series-oct-2022/discussion/356540">here</a>, the change per column will be the following, using <code>pandas</code> library:</p>
 
 </div>
 </div>
@@ -14812,7 +14829,12 @@ memory usage: 2.5+ GB
 </pre></div>
 <p><strong>Note:</strong> Each event consists of a chronological series of frames recorded at 10 frames per second. However, Rocket League is a fast game, but it do not involve relativistic particles. An adequate downsampling from the train dataset do not neccesarilly represent a mistake and can help to reduce model training / data analysis.</p>
 <p>In this specific work the selected downsampling <strong>transform the 10 frames per second recorded to ~3 frames per second</strong>. Given the chronological order of the dataset rows, this can be done via <code>df = df[::4]</code>.</p>
-<h1 id="Exploratory-Analysis-of-the-Data">Exploratory Analysis of the Data<a class="anchor-link" href="#Exploratory-Analysis-of-the-Data">&#182;</a></h1>
+<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+  <h2 id="Import-Libraries">
+    <p style="font-family:Helvetica; font-weight:bold; letter-spacing: 0px; color:rgb(45, 64, 178); font-size:100%; text-align:left;padding: 5px; border-bottom: 5px solid rgb(45, 64, 178)">
+      Exploratory Data Analysis</p><a class="anchor-link" href="#Exploratory-Analysis-of-the-Data">&#182;</a>
+    </h2>
+  </div>
 </div>
 </div>
 </div>
@@ -16806,7 +16828,12 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Prediction-Submission">Prediction Submission<a class="anchor-link" href="#Prediction-Submission">&#182;</a></h1>
+  <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+    <h2 id="Import-Libraries">
+      <p style="font-family:Helvetica; font-weight:bold; letter-spacing: 0px; color:rgb(45, 64, 178); font-size:100%; text-align:left;padding: 5px; border-bottom: 5px solid rgb(45, 64, 178)">
+        Model Training and Prediction</p><a class="anchor-link" href="#Prediction-Submission">&#182;</a>
+      </h2>
+    </div>
 </div>
 </div>
 </div>
@@ -18060,7 +18087,7 @@ jp-needs-light-background
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The most important features are:</p>
 <ul>
-<li><strong>Ball positioning angles: alpha<em>[i] &amp; beta</em>[i]</strong></li>
+<li><strong>Ball positioning angles: alpha &amp; beta</strong></li>
 <li><strong>Minimum players distance to the ball 1 sec into the future as much</strong> (mdist_p[i])</li>
 <li><strong>Diference between velocity vectors</strong> (diff_p[i])</li>
 </ul>
