@@ -1,184 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 20px;
-    }
-    .poster img {
-      width: 300px; /* Set a rectangular width */
-      height: 200px; /* Set a rectangular height */
-      object-fit: cover;
-    }
-    section {
-      margin-bottom: 50px;
-    }
-    h2 {
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Machine Learning Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3e%3cpath d='M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zM10 4h4v2h-4V4zm10 15H4V8h16v11z'/%3e%3c/svg%3e">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <h1 style="text-align: center;">Daniel Darquea's Project Portfolio</h1>
+    <header>
+        <nav class="nav">
+            <div class="nav__brand">My ML Portfolio</div>
+            <ul class="nav__links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">&#9728;</button>
+        </nav>
+    </header>
 
-  <!-- Machine Learning Section -->
-  <section>
-    <h2>Machine Learning</h2>
-    <div class="container">
-      <div class="poster">
-        <a href="projects/ml1_tps-sep-2022.html">
-          <img src="posters/ml1_poster.png" alt="ML Project 1 Poster">
-          
-          <div class="overlay" style="background-color: #03071e; color:aliceblue">
-            <div class="overlay-section">
-              <h4>Predict future sales using time series forecasting</h4>
-              <h4>Actions</h4>
-              <ul class="overlay-list">
-                <li>Developed a composed forecasting model using store, product rates, and seasonality data models.</li>
-              </ul>
-              <h4>Techniques</h4>
-              <ul class="overlay-list">
-                <li>Implemented Ridge Regression, ARIMA and other data models performed by Exploratory Data Analysis (EDA) to
-                  identify weekend, holiday, and seasonal effects.</li>
-              </ul>
-            </div>
-          </div>
-        </a>
-        <h3>Sales Forecast for Large Scale Bookstore</h3>
-      </div>
-      <div class="poster">
-        <a href="projects/ml2_tps3-episode-1-california-housing.html">
-          <img src="posters/ml2_poster.png" alt="ML Project 2 Poster">
-          <div class="overlay" style="background-color: #03071e; color:aliceblue">
-            <div class="overlay-section">
-              <h4>Predict median house prices based on property features</h4>
-              <h4>Actions</h4>
-              <ul class="overlay-list">
-                <li>Engineered features and created a regression model for house price prediction.</li>
-              </ul>
-              <h4>Techniques</h4>
-              <ul class="overlay-list">
-                <li>Applied a combination of Regression Models (XGBoost, LGBM and CatBoost) with cross-validation to improve
-                  model accuracy.</li>
-              </ul>
-            </div>
-          </div>
-        </a>
-        <h3>California Housing Price Prediction</h3>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Deep Learning Section -->
-  <section>
-    <h2>Deep Learning</h2>
-    <div class="container">
-      <div class="poster">
-        <a href="projects\dp2_buildings-location-from-satellite-images.html">
-          <img src="posters/dp2_photo.jpg" alt="DP Project 1 Poster">
-          
-          <div class="overlay" style="background-color: #970000; color:rgb(236, 236, 236)">
-            <div class="overlay-section">
-              <h4>Building segmentation using satellite imagery</h4>
-              <h4>Actions</h4>
-              <ul class="overlay-list">
-                <li>U-Net model trained on Google's TPU for building segmentation.</li>
-              </ul>
-              <h4>Techniques</h4>
-              <ul class="overlay-list">
-                <li>Data Selection</li>
-                <li>Fine Tuning</li>
-                <li>Definition of adequate Losses, Metrics and Architecure</li>
-              </ul>
-            </div>
-          </div>
-          
-        </a>
-        <h3>Building segmentation from satellite imagery</h3>
-      </div>
-      <div class="poster">
-        <a href="projects/dp1-tabular-playground-series-oct-2022.html">
-          <img src="posters/dp1_poster.jpg" alt="DP Project 1 Poster">
-          
-          <div class="overlay" style="background-color: #970000; color:rgb(236, 236, 236)">
-            <div class="overlay-section">
-              <h4>Predict team scores in Rocket League within 10 seconds</h4>
-              <h4>Actions</h4>
-              <ul class="overlay-list">
-                <li>Built a deep learning model for score prediction.</li>
-              </ul>
-              <h4>Techniques</h4>
-              <ul class="overlay-list">
-                <li>Used the adequate model architecture and applied cross-validation techniques to optimize predictive accuracy
-                  of the Deep Neural Network proposed. Engineered features impact the most over final estimations.</li>
-              </ul>
-            </div>
-          </div>
-          
-        </a>
-        <h3>Rocket League Game Score Prediction</h3>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Optimization Problems Section -->
-  <section>
-    <h2>Optimization Problems</h2>
-    <div class="container">
-        <div class="poster">
-            <a href="projects/p1_bancolombia-bank-linear-optimization.html">
-              <img src="posters/poster1.png" alt="ML Project 1 Poster">
-              
-              <div class="overlay" style="background-color: #faa307; color:rgb(20, 20, 20)">
-                <div class="overlay-section">
-                  <h4>Schedule Workers Optimization Problem</h4>
-                  <h4>Actions</h4>
-                  <ul class="overlay-list">
-                    <li>Set equations describing the problem to optimize.</li>
-                  </ul>
-                  <h4>Techniques</h4>
-                  <ul class="overlay-list">
-                    <li>Applied Linear Optimization methods to find the most efficient worker schedule.</li>
-                    <li>Developed scenario-based decision-making methodologies.</li>
-                  </ul>
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <h1>Daniel Darquea</h1>
+                <div class="hero__socials">
+                    <a href="https://www.linkedin.com/in/bryan-daniel-darquea-713429213/" aria-label="linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <!-- <a href="#" aria-label="github" target="_blank"><i class="fa-brands fa-github"></i></a> -->
+                    <a href="https://www.kaggle.com/bryandarquea" aria-label="kaggle" target="_blank"><i class="fa-brands fa-kaggle"></i></a>
                 </div>
-              </div>
-              
-            </a>
-            <h3>DATATON 2023 BANCOLOMBIA: Linear Optimization Problem</h3>
-        </div>
-        <div class="poster">
-            <a href="projects/p2_the-christmas-card-conundrum-2022.html">
-              <img src="posters/poster2.jpg" alt="ML Project 1 Poster">
-              
-              <div class="overlay" style="background-color: #faa307; color:rgb(20, 20, 20)">
-                <div class="overlay-section">
-                  <h4>Optimize a traveling salesman problem for image printing.</h4>
-                  <h4>Actions</h4>
-                  <ul class="overlay-list">
-                    <li>Solved a complex optimization problem to find the best route for printing an image pixel by pixel.</li>
-                  </ul>
-                  <h4>Techniques</h4>
-                  <ul class="overlay-list">
-                    <li>Set configuration constraint to simplify optimization.</li>
-                    <li>Used Traveling Salesman algorithms (LKH).</li>
-                  </ul>
+                <h2>Machine Learning Engineer &amp; Data Scientist</h2>
+                <p>I build intelligent solutions that transform raw data into real-world impact.</p>
+                <div class="hero__cta">
+                    <a href="#projects" class="btn btn--primary">See My Work</a>
+                    <a href="#contact" class="btn btn--secondary">Get in Touch</a>
                 </div>
-              </div>
-            </a>
-            <h3>Santa 2022 : The Christmas Card Conundrum Challenge</h3>
-        </div>
-    </div>
-  </section>
+            </div>
+        </section>
+        <!-- About Me -->
+        <section id="about" class="section section--about reveal-on-scroll">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    Hello! I'm <strong>Daniel Darquea</strong>, a data scientist & machine learning
+                    engineer passionate about turning data into actionable insights.
+                    Below is a selection of my favorite projects. Feel free to explore!
+                </p>
+            </div>
+        </section>
 
+        <!-- Projects -->
+        <section id="projects" class="section section--projects reveal-on-scroll">
+            <div class="container">
+                <h2>Projects</h2>
+
+                <div class="project-grid">
+                    
+                <h3 class="category-heading">Machine Learning</h3>
+                    <!-- Machine Learning project 1 -->
+                    <a href="projects/ml1_tps-sep-2022.html" class="project-tile">
+                        <img src="posters/ml1_poster.png" alt="Project 1 thumbnail" />
+                        <div class="project-info">
+                            <h3>Sales Forecast for Large Scale Bookstore</h3>
+                            <p>Predict future sales using time series forecasting</p>
+                            <h4>Actions</h4>
+                            <ul class="overlay-list">
+                                <li>Developed a composed forecasting model using store, product rates, and seasonality data models.</li>
+                            </ul>
+                            <h4>Techniques</h4>
+                            <ul class="overlay-list">
+                                <li>Implemented Ridge Regression, ARIMA and other data models performed by Exploratory Data Analysis (EDA) to
+                                identify weekend, holiday, and seasonal effects.</li>
+                            </ul>
+                            <ul class="project-tags">
+                                <li>ARIMA</li><li>Ridge</li><li>Composed Model</li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <!-- Machine Learning project 2 -->
+                    <a href="projects/ml2_tps3-episode-1-california-housing.html" class="project-tile">
+                        <img src="posters/ml2_poster.png" alt="Project 2 thumbnail" />
+                        <div class="project-info">
+                            <h3>California Housing Price Prediction</h3>
+                            <p>Predict median house prices based on property features</p>
+
+                            <h4>Actions</h4>
+                            <ul class="overlay-list">
+                                <li>Engineered features and created a regression model for house price prediction.</li>
+                            </ul>
+                            <h4>Techniques</h4>
+                            <ul class="overlay-list">
+                                <li>Applied a combination of Regression Models (XGBoost, LGBM and CatBoost) with cross-validation to improve
+                                model accuracy.</li>
+                            </ul>
+                            <ul class="project-tags">
+                                <li>Catboost</li><li>XGBoost</li><li>LGBM</li>
+                            </ul>
+                        </div>
+                    </a>
+
+                
+                <h3 class="category-heading">Deep Learning</h3>
+                    <!-- Deep Learning project 1 -->
+                    <a href="projects\dp2_buildings-location-from-satellite-images.html" class="project-tile">
+                        <img src="posters/dp2_photo.jpg" alt="Deep Learning project 1 thumbnail" />
+                        <div class="project-info">
+                            <h3>Building segmentation from satellite imagery</h3>
+                            <p>Building segmentation using satellite imagery</p>
+
+                            <h4>Actions</h4>
+                            <ul class="overlay-list">
+                                <li>U-Net model trained on Google's TPU for building segmentation.</li>
+                            </ul>
+                            <h4>Techniques</h4>
+                            <ul class="overlay-list">
+                                <li>Data Selection</li>
+                                <li>Fine Tuning</li>
+                                <li>Definition of adequate Losses, Metrics and Architecure</li>
+                            </ul>
+
+                            <ul class="project-tags">
+                                <li>Tensorflow</li><li>seresnext50 encoder U-Net</li>
+                            </ul>
+                        </div>
+                    </a>
+                    
+
+                    <!-- Deep Learning project 2 -->
+                    <a href="projects/dp1-tabular-playground-series-oct-2022.html" class="project-tile">
+                        <img src="posters/dp1_poster.jpg" alt="Deep Learning project 2 thumbnail" />
+                        <div class="project-info">
+                            <h3>Rocket League Game Score Prediction</h3>
+                            <p>Predict team scores in Rocket League within 10 seconds</p>
+
+                            <h4>Actions</h4>
+                            <ul class="overlay-list">
+                                <li>Built a deep learning model for score prediction.</li>
+                            </ul>
+                            <h4>Techniques</h4>
+                            <ul class="overlay-list">
+                                <li>Used the adequate model architecture and applied cross-validation techniques to optimize predictive accuracy
+                                of the Deep Neural Network proposed. Engineered features impact the most over final estimations.</li>
+                            </ul>
+                            
+                            <ul class="project-tags">
+                                <li>Tensorflow</li><li>Binary Classification</li>
+                            </ul>
+                        </div>
+                    </a>
+
+                <!-- Optimization -->
+                
+                    <h3 class="category-heading">Optimization</h3>
+                    <!-- Optimization project 1 -->
+                    <a href="projects/p1_bancolombia-bank-linear-optimization.html" class="project-tile">
+                        <img src="posters/poster1.png" alt="Optimization project thumbnail" />
+                        <div class="project-info">
+                            <h3>DATATON 2023 BANCOLOMBIA: Linear Optimization Problem</h3>
+                            <p>Schedule Workers Optimization Problem</p>
+                            <h4>Actions</h4>
+                            <ul class="overlay-list">
+                                <li>Set equations describing the problem to optimize.</li>
+                            </ul>
+                            <h4>Techniques</h4>
+                            <ul class="overlay-list">
+                                <li>Applied Linear Optimization methods to find the most efficient worker schedule.</li>
+                                <li>Developed scenario-based decision-making methodologies.</li>
+                            </ul>
+                            
+                            <ul class="project-tags">
+                                <li>Python</li><li>PuLP</li>
+                            </ul>
+                        </div>
+                    </a>
+                    
+                    <!-- Optimization project 2 -->
+                    <a href="projects/p2_the-christmas-card-conundrum-2022.html" class="project-tile">
+                        <img src="posters/poster2.jpg" alt="Optimization project 2 thumbnail" />
+                        <div class="project-info">
+                            <h3>Santa 2022 : The Christmas Card Conundrum Challenge</h3>
+                            <p>Linear programming model minimizing logistics cost across multiple warehouses.</p>
+                            <h4>Optimize a traveling salesman problem for image printing.</h4>
+                            <h4>Actions</h4>
+                            <ul class="overlay-list">
+                                <li>Solved a complex optimization problem to find the best route for printing an image pixel by pixel.</li>
+                            </ul>
+                            <h4>Techniques</h4>
+                            <ul class="overlay-list">
+                                <li>Set configuration constraint to simplify optimization.</li>
+                                <li>Used Traveling Salesman algorithms (LKH).</li>
+                            </ul>
+                            <ul class="project-tags">
+                                <li>NumPy</li><li>LKH</li>
+                            </ul>
+                        </div>
+                    </a>
+                    
+
+                </div>
+
+        <!-- Contact -->
+        <section id="contact" class="section section--contact reveal-on-scroll">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>
+                    Have an exciting idea or opportunity? Let's talk! <br />
+                    <a href="mailto:bryanddarquea@gmail.com" class="btn btn--primary">bryanddarquea@gmail.com</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            
+            <p>&copy; 2025 Daniel Darquea</p>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
 </body>
 </html>
