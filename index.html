@@ -61,56 +61,38 @@
                 <h2>Projects</h2>
 
                 <div class="project-grid">
-                    
-                <h3 class="category-heading">Machine Learning</h3>
-                    <!-- Machine Learning project 1 -->
-                    <a href="projects/ml1_tps-sep-2022.html" class="project-tile">
-                        <img src="posters/ml1_poster.png" alt="Project 1 thumbnail" />
-                        <div class="project-info">
-                            <h3>Sales Forecast for Large Scale Bookstore</h3>
-                            <p>Predict future sales using time series forecasting</p>
-                            <h4>Actions</h4>
-                            <ul class="overlay-list">
-                                <li>Developed a composed forecasting model using store, product rates, and seasonality data models.</li>
-                            </ul>
-                            <h4>Techniques</h4>
-                            <ul class="overlay-list">
-                                <li>Implemented Ridge Regression, ARIMA and other data models performed by Exploratory Data Analysis (EDA) to
-                                identify weekend, holiday, and seasonal effects.</li>
-                            </ul>
-                            <ul class="project-tags">
-                                <li>ARIMA</li><li>Ridge</li><li>Composed Model</li>
-                            </ul>
-                        </div>
-                    </a>
-
-                    <!-- Machine Learning project 2 -->
-                    <a href="projects/ml2_tps3-episode-1-california-housing.html" class="project-tile">
-                        <img src="posters/ml2_poster.png" alt="Project 2 thumbnail" />
-                        <div class="project-info">
-                            <h3>California Housing Price Prediction</h3>
-                            <p>Predict median house prices based on property features</p>
-
-                            <h4>Actions</h4>
-                            <ul class="overlay-list">
-                                <li>Engineered features and created a regression model for house price prediction.</li>
-                            </ul>
-                            <h4>Techniques</h4>
-                            <ul class="overlay-list">
-                                <li>Applied a combination of Regression Models (XGBoost, LGBM and CatBoost) with cross-validation to improve
-                                model accuracy.</li>
-                            </ul>
-                            <ul class="project-tags">
-                                <li>Catboost</li><li>XGBoost</li><li>LGBM</li>
-                            </ul>
-                        </div>
-                    </a>
-
+                
                 
                 <h3 class="category-heading">Deep Learning</h3>
+                    <!-- Deep Learning project 3 -->
+                    <a href="projects\dp3_part1-apnea-audio-ml.html" class="project-tile">
+                        <img src="posters\dp3_poster.jpg" alt="" />
+                        <div class="project-info">
+                            <h3>Detection of Obstructive Sleep Apnea using Deep Learning on Audio Signals.<span style="color:orangered"> Part 1: Tracheal Microphone Data</span></h3>
+                            <p>Detection of obstructive apnea events from tracheal audio recordings during polysomnography.</p>
+                            <h4>Actions</h4>
+                            <ul class="overlay-list">
+                                <li>Extraction and preprocessing of tracheal microphone signals from PSG .edf files.</li>
+                                <li>Conversion of 10s audio segments into normalized Mel spectrograms.</li>
+                                <li>Training EfficientNetv2B1 on balanced Apnea/No Apnea samples.</li>
+                            </ul>
+                            <h4>Techniques</h4>
+                            <ul class="overlay-list">
+                                <li>Custom preprocessing pipeline with TFRecords.</li>
+                                <li>Data balancing per patient and event type.</li>
+                                <li>Mixed precision training and Cosine annealing Scheduler</li>
+                                <li>Definition of adequate Losses, Metrics and Results Analysis</li>
+                            </ul>
+
+                            <ul class="project-tags">
+                                <li>Tensorflow</li><li>EfficientNetv2B1</li>
+                            </ul>
+                        </div>
+                    </a>
+                    
                     <!-- Deep Learning project 1 -->
                     <a href="projects\dp2_buildings-location-from-satellite-images.html" class="project-tile">
-                        <img src="posters/dp2_photo.jpg" alt="Deep Learning project 1 thumbnail" />
+                        <img src="posters/dp2_photo.jpg" alt="" />
                         <div class="project-info">
                             <h3>Building segmentation from satellite imagery</h3>
                             <p>Building segmentation using satellite imagery</p>
@@ -156,9 +138,57 @@
                         </div>
                     </a>
 
+                
+                <h3 class="category-heading">Machine Learning</h3>
+                    <!-- Machine Learning project 1 -->
+                    <a href="projects/ml1_tps-sep-2022.html" class="project-tile">
+                        <img src="posters/ml1_poster.png" alt="Project 1 thumbnail" />
+                        <div class="project-info">
+                            <h3>Sales Forecast for Large Scale Bookstore</h3>
+                            <p>Predict future sales using time series forecasting</p>
+                            <h4>Actions</h4>
+                            <ul class="overlay-list">
+                                <li>Developed a composed forecasting model using store, product rates, and seasonality data models.</li>
+                            </ul>
+                            <h4>Techniques</h4>
+                            <ul class="overlay-list">
+                                <li>Implemented Ridge Regression, ARIMA and other data models performed by Exploratory Data Analysis (EDA) to
+                                identify weekend, holiday, and seasonal effects.</li>
+                            </ul>
+                            <ul class="project-tags">
+                                <li>ARIMA</li><li>Ridge</li><li>Composed Model</li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <!-- Machine Learning project 2 -->
+                    <a href="projects/ml2_tps3-episode-1-california-housing.html" class="project-tile">
+                        <img src="posters/ml2_poster.png" alt="Project 2 thumbnail" />
+                        <div class="project-info">
+                            <h3>California Housing Price Prediction</h3>
+                            <p>Predict median house prices based on property features</p>
+
+                            <h4>Actions</h4>
+                            <ul class="overlay-list">
+                                <li>Engineered features and created a regression model for house price prediction.</li>
+                            </ul>
+                            <h4>Techniques</h4>
+                            <ul class="overlay-list">
+                                <li>Applied a combination of Regression Models (XGBoost, LGBM and CatBoost) with cross-validation to improve
+                                model accuracy.</li>
+                            </ul>
+                            <ul class="project-tags">
+                                <li>Catboost</li><li>XGBoost</li><li>LGBM</li>
+                            </ul>
+                        </div>
+                    </a>
+
+                
+                
+
                 <!-- Optimization -->
                 
-                    <h3 class="category-heading">Optimization</h3>
+                <h3 class="category-heading">Optimization</h3>
                     <!-- Optimization project 1 -->
                     <a href="projects/p1_bancolombia-bank-linear-optimization.html" class="project-tile">
                         <img src="posters/poster1.png" alt="Optimization project thumbnail" />
