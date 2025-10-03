@@ -214,7 +214,7 @@ a {
 .project-info {
   padding: 1rem;
   grid-column: 2;
-  font-size: 0.95rem; /* shrink overall text */
+  font-size: 0.9rem; /* shrink overall text */
   line-height: 1.4;
 }
 
@@ -232,7 +232,7 @@ a {
 
 .project-info .overlay-list {
   margin-left: 1.5em;
-  font-size: 0.9rem; /* keep bullets slightly smaller */
+  font-size: 0.85rem; /* keep bullets slightly smaller */
 }
 
 .project-info p {
